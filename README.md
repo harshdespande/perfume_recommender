@@ -2,8 +2,8 @@
 
 A sophisticated perfume recommendation system designed to help users discover their perfect scent based on preferences, lifestyle, and body chemistry.  
 
-![Project Demo](images/project_demo.png)
 
+<img src="https://github.com/harshdespande/perfume_recommender/blob/main/imgperfume.jpg" alt="Project Demo" width="400">
 
 ## Features  
 - Personalized fragrance recommendations  
