@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura Fragrance</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style type="text/css">
+    body {
+      background-color: #E0C3FC; /* Light purple background color */
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    hr{ 
+      color: black;
+    }
+
+    h1 {
+      color: #4B0082;
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .i1 {
+      margin-top: 20px;
+      width: 450px;
+      height: auto;
+      transition: 0.5s;
+      border: 5px solid #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .i1:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+
+    /* About Us Section */
+    .heading {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    .heading h1 {
+      font-size: 50px;
+      color: #000;
+      margin-bottom: 25px;
+    }
+
+    .heading h1::after {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 10px;
+      display: block;
+      margin: 0 auto;
+      background-color: #4caf50;
+    }
+
+    .heading p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 35px;
+    }
+
+    /* About content */
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 10px 20px;
+    }
+
+    .about {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about-image {
+      flex: 1;
+      margin-right: 60px;
+      overflow: hidden;
+    }
+
+    .about-image img {
+      width: 300px;
+      height: 300px;
+      display: block;
+      transition: 0.5s ease;
+      margin-left: 120px;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.2);
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content h2 {
+      font-size: 25px;
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    .about-content p {
+      font-size: 20px;
+      line-height: 1.5;
+      color: #666;
+    }
+
+    /* Form Area */
+    .form-area {
+      padding-top: 5%;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .form-area h2 {
+      color: #4B0082;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .form-control {
+      border: 2px solid #4B0082;
+      border-radius: 5px;
+      padding: 12px;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: #21b8ab;
+      outline: none;
+    }
+
+    .btn-primary {
+      background-color: #4B0082;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 25px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #21b8ab;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .footer-container {
+      width: 100%;
+      padding: 40px 10px 30px;
+    }
+
+    .social-icon {
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-icon a {
+      text-decoration: none;
+      padding: 10px;
+      background-color: whitesmoke;
+      margin: 10px;
+      border-radius: 50px;
+    }
+
+    .social-icon a i {
+      font-size: 3em;
+      color: black;
+      opacity: 0.9;
+    }
+
+    .social-icon a:hover {
+      background-color: #15259e;
+      transition: 0.5s;
+    }
+
+    @media screen and (max-width: 768px) {
+      .heading {
+        padding: 0px 20px;
+      }
+      .heading h1 {
+        font-size: 30px;
+      }
+      .heading p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .container {
+        padding: 0px;
+      }
+      .about {
+        padding: 20px;
+        flex-direction: column;
+      }
+      .about-image {
+        margin-bottom: 20px;
+        margin-right: 0px;
+      }
+      .about-content {
+        font-size: 16px;
+      }
+    }
+
+     .perfume-button {
+      background: linear-gradient(45deg, #ff7eb3, #ff758c, #fc8d32, #f2a65a);
+      background-size: 300% 300%;
+      color: black;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+      outline: none;
+      position: relative;
+      border: 3px solid white;
+    }
+
+    .perfume-button::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      z-index: -1;
+      background: linear-gradient(120deg, #b92b27, #1565c0, #ff8c00);
+      border-radius: 14px;
+      filter: blur(10px);
+    }
+
+    .perfume-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .perfume-button:hover::before {
+      filter: blur(15px);
+    }
+
+     /*hr {
+      border: none;
+      border-top: 2px solid black;
+      margin: 20px 0;
+    }*/
+
+
+
+
+  </style>
+</head>
+<body>
+  <hr><hr>
+  <img class="i1" src="imgperfume.jpg" alt="Perfume Image">
+  <hr><hr>
+<section>
+  <button class="perfume-button" onclick="window.location.href='http://localhost:8501/'">Get Perfume Recommendation</button>
+
+</section>
+  <section>
+    <div class="heading">
+      <h1>About Us</h1>
+      <p>"Unveil Your Essence with Every Scent, Captivate the Senses with Timeless Elegance, Where Fragrance Becomes Art, Experience the Essence of Luxury, and Discover Your Signature Scent, Perfected."</p>
+    </div>
+    <div class="container">
+      <section class="about">
+        <div class="about-image">
+          <img src="https://images.pexels.com/photos/10924520/pexels-photo-10924520.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Perfume Image">
+        </div>
+        <div class="about-content">
+          <h2>Discover Your Perfect Scent</h2>
+          <p>Welcome to Aura Fragrance, where we believe that the perfect fragrance should be as unique as you are. Our advanced perfume recommendation system is designed to help you find the ideal scent tailored to your body, preferences, and lifestyle. We understand that choosing the right fragrance can be overwhelming, which is why we make it easy by considering important factors such as how much you sweat, how strong you like your perfume to be, and your preferred scents — whether it’s woody, floral, citrus, or something else entirely.
+          To ensure we recommend the perfect fragrance, we also take into account the occasion you're shopping for, your budget, and your skin type. Plus, if you have any additional notes or specific preferences, we're all ears! At Aura Fragrance, we’re committed to helping you discover a scent that not only complements your personality but enhances your everyday experience. Let us guide you on a fragrant journey that’s all about you.</p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="form-area">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" class="form-control" id="exampleInputName1" placeholder="Your Name" required>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required>
+      <textarea class="form-control" id="exampleInputMessage1" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+  </section>
+  <hr><hr>
+
+  <!-- Optional footer with social links -->
+  <div class="footer-container">
+    <div class="social-icon">
+      <a href="#" id="a2"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" id="a3"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" id="a4"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+</body>
+</html>
