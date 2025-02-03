@@ -16,5 +16,5 @@ A sophisticated perfume recommendation system designed to help users discover th
 
 ## How to Clone the Repository  
 ```bash
-git clone https://github.com/harshdespande/AURA-Fragrance-Perfume-Recommendation-System
-cd AURA-Fragrance-Perfume-Recommendation-System
+git clone https://github.com/harshdespande/Perfume-Recommender
+cd Perfume-Recommender
